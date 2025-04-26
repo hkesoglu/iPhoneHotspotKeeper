@@ -42,9 +42,19 @@
       duration:"30:00"
     },
     {
+      name:"45 Minutes of Silence",
+      file:"silence_45min.mp3",
+      duration:"45:00"
+    },    
+    {
       name:"60 Minutes of Silence",
       file:"silence_60min.mp3",
       duration:"60:00"
+    },
+    {
+      name:"80 Minutes of Silence",
+      file:"silence_80min.mp3",
+      duration:"80:00"
     }
   ]
 
