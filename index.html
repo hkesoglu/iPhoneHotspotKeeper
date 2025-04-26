@@ -1,12 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotspot Keep Alive</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    .category {
+      margin-top: 30px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: block;
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+  </style>
+</head>
 <body>
 
-<audio controls autoplay>
-  <source src="silence_15min.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+<h1>Hotspot Keep Alive 🎵</h1>
+<p>Select a duration to keep your connection alive:</p>
+
+<div class="category">
+  <h2>15 Minutes Silent Audio</h2>
+  <audio controls autoplay loop>
+    <source src="silence_15min.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+<div class="category">
+  <h2>1 Hour Silent Audio</h2>
+  <audio controls>
+    <source src="silence_60min.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+<div class="category">
+  <h2>2 Hours Silent Audio</h2>
+  <audio controls>
+    <source src="silence_120min.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
 
 </body>
 </html>
-
