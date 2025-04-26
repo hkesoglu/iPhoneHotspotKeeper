@@ -19,34 +19,24 @@
       color: #666;
       margin-bottom: 30px;
     }
-    .player-wrapper {
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      display: inline-block;
-    }
     audio {
-      width: 100%;
-      margin-top: 20px;
+      width: 80%;
+      max-width: 400px;
     }
   </style>
 </head>
 <body>
 
 <h1>Hotspot Keep Alive 🎵</h1>
-<p>Silent looping audio to keep your hotspot connection alive.</p>
+<p>Playing 30 minutes of silent audio to keep your connection alive.</p>
 
-<div class="player-wrapper">
-  <h2>Silent 1-Minute Audio</h2>
-  <audio id="audioPlayer" controls autoplay loop muted>
-    <source src="silence_2sec.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</div>
+<audio id="audioPlayer" controls autoplay muted>
+  <source src="silence_30min.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 
 <script>
-  // Bazı tarayıcılarda autoplay bloklanırsa otomatik başlatmayı yeniden deniyoruz
+  // Safari autoplay koruması için
   document.addEventListener('DOMContentLoaded', function() {
     const player = document.getElementById('audioPlayer');
     player.play().catch((e) => {
