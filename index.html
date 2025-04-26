@@ -7,9 +7,14 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f8f9fa;
-      text-align: center;
-      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
       margin: 0;
+      padding: 20px;
+      text-align: center;
     }
     h1 {
       color: #333;
@@ -19,31 +24,32 @@
       color: #666;
       margin-bottom: 30px;
     }
-    audio {
-      width: 80%;
+    .audio-wrapper {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       max-width: 400px;
+      width: 90%;
+    }
+    audio {
+      width: 100%;
+      outline: none;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
 <h1>Hotspot Keep Alive 🎵</h1>
-<p>Playing 30 minutes of silent audio to keep your connection alive.</p>
+<p>Playing 45 minutes of silent audio to keep your connection alive.</p>
 
-<audio id="audioPlayer" controls autoplay muted>
-  <source src="silence_30min.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-<script>
-  // Safari autoplay koruması için
-  document.addEventListener('DOMContentLoaded', function() {
-    const player = document.getElementById('audioPlayer');
-    player.play().catch((e) => {
-      console.log('Autoplay blocked, user interaction needed.');
-    });
-  });
-</script>
+<div class="audio-wrapper">
+  <audio controls autoplay muted>
+    <source src="silence_45min.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
 
 </body>
 </html>
