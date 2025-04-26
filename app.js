@@ -32,19 +32,19 @@
   // test MP3 files from : https://file-examples.com/index.php/sample-audio-files/sample-mp3-download/
   var listAudio = [
     {
-      name:"Artist 1 - audio 1",
+      name:"15 Minutes of Silence",
       file:"silence_15min.mp3",
       duration:"15:00"
     },
     {
-      name:"Artist 2 - audio 2",
-      file:"https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_2MG.mp3",
-      duration:"00:52"
+      name:"30 Minutes of Silence",
+      file:"silence_30min.mp3",
+      duration:"30:00"
     },
     {
-      name:"Artist 3 - audio 3",
-      file:"https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_1MG.mp3",
-      duration:"00:27"
+      name:"60 Minutes of Silence",
+      file:"silence_60min.mp3",
+      duration:"60:00"
     }
   ]
 
