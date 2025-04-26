@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotspot Keep Alive</title>
+</head>
+<body>
+  <h1>Hotspot Aktif Tutuluyor...</h1>
+  <audio id="audioPlayer" autoplay loop muted>
+    <source src="silence.mp3" type="audio/mpeg">
+    Tarayıcınız ses dosyasını desteklemiyor.
+  </audio>
+  <script>
+    var audio = document.getElementById('audioPlayer');
+    audio.play();
+  </script>
+</body>
+</html>
