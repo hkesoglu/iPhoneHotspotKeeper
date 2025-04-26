@@ -9,55 +9,51 @@
       background-color: #f8f9fa;
       text-align: center;
       padding: 50px;
+      margin: 0;
     }
     h1 {
       color: #333;
+      margin-bottom: 10px;
     }
-    .category {
-      margin-top: 30px;
-      padding: 20px;
+    p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .player-wrapper {
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      display: block;
-      width: 300px;
-      margin-left: auto;
-      margin-right: auto;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: inline-block;
     }
     audio {
       width: 100%;
-      margin-top: 10px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
 <h1>Hotspot Keep Alive 🎵</h1>
-<p>Select a duration to keep your connection alive:</p>
+<p>Silent looping audio to keep your hotspot connection alive.</p>
 
-<div class="category">
-  <h2>15 Minutes Silent Audio</h2>
-  <audio controls autoplay loop>
-    <source src="silence_15min.mp3" type="audio/mpeg">
+<div class="player-wrapper">
+  <h2>Silent 1-Minute Audio</h2>
+  <audio id="audioPlayer" controls autoplay loop muted>
+    <source src="silence_1min.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 </div>
 
-<div class="category">
-  <h2>1 Hour Silent Audio</h2>
-  <audio controls>
-    <source src="silence_60min.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</div>
-
-<div class="category">
-  <h2>2 Hours Silent Audio</h2>
-  <audio controls>
-    <source src="silence_120min.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</div>
+<script>
+  // Bazı tarayıcılarda autoplay bloklanırsa otomatik başlatmayı yeniden deniyoruz
+  document.addEventListener('DOMContentLoaded', function() {
+    const player = document.getElementById('audioPlayer');
+    player.play().catch((e) => {
+      console.log('Autoplay blocked, user interaction needed.');
+    });
+  });
+</script>
 
 </body>
 </html>
