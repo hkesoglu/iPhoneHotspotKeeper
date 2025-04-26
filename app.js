@@ -32,27 +32,27 @@
   // test MP3 files from : https://file-examples.com/index.php/sample-audio-files/sample-mp3-download/
   var listAudio = [
     {
-      name:"15 Minutes of Silence",
+      name:"15 Minutes of Silence (0.9MB)",
       file:"silence_15min.mp3",
       duration:"15:00"
     },
     {
-      name:"30 Minutes of Silence",
+      name:"30 Minutes of Silence (1.8MB)",
       file:"silence_30min.mp3",
       duration:"30:00"
     },
     {
-      name:"45 Minutes of Silence",
+      name:"45 Minutes of Silence (2.7MB)",
       file:"silence_45min.mp3",
       duration:"45:00"
     },    
     {
-      name:"60 Minutes of Silence",
+      name:"60 Minutes of Silence (3.5MB)",
       file:"silence_60min.mp3",
       duration:"60:00"
     },
     {
-      name:"80 Minutes of Silence",
+      name:"80 Minutes of Silence (4.7MB)",
       file:"silence_80min.mp3",
       duration:"80:00"
     }
